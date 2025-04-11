@@ -8,12 +8,10 @@ def spread_of_fire(forest):
     healthy_trees = 0
     days = 0
     directions = [(0,1), (1,0), (0,-1), (-1,0)]
-
-    # Initialize queue with all burning trees o(n^2)
     for r in range(rows):
         for c in range(cols):
             if forest[r][c] == 2:
-                queue.append((r, c, 0))  # (row, col, day)
+                queue.append((r, c, 0))  
             elif forest[r][c] == 1:
                 healthy_trees += 1
 
